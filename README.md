@@ -118,4 +118,11 @@ sudo systemctl enable mongod
   use alunos
   use agenda
   ````
+9. Lista bancos criados
+
+  ````bash
+  show dbs
+  ````
+
+Após adicionar todos os arquivos em seus respquitivos diretorios.
 
