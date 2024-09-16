@@ -42,32 +42,35 @@ Um sistema web moderno e simples para gerenciar alunos e seus horários de refor
 
 2. Acesse o diretório do projeto:
 
-  ````cd meu_projeto_reforco````
+   ```bash
+   git clone https://github.com/damanciofb/app-agendador-aulas-reforco.git
 
 3. Crie e ative um ambiente virtual:
 
-````python3 -m venv venv````
-````source venv/bin/activate````
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
 
 4. Instale as dependências:
+  
+   ```bash
+   git clone https://github.com/damanciofb/app-agendador-aulas-reforco.git
 
-````pip install -r requirements.txt````
+5. Estrutura de diretorios
 
-
-Estutura de diretorios:
-
-meu_projeto_reforco
-├── app.py
-├── static
-│   ├── js
-│   │   └── script.js
-│   └── style.css
-└── templates
-    ├── base.html
-    ├── index.html
-    ├── register.html
-    ├── schedule.html
-    └── success.html
-
+  ````bash
+  meu_projeto_reforco 
+  ├── app.py
+  ├── static
+  │   ├── js
+  │   │   └── script.js
+  │   └── style.css
+  └── templates
+      ├── base.html
+      ├── index.html
+      ├── register.html
+      ├── schedule.html
+      └── success.html
+````
 
 
