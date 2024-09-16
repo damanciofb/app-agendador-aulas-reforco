@@ -54,7 +54,7 @@ Um sistema web moderno e simples para gerenciar alunos e seus horários de refor
 4. Instale as dependências:
   
    ```bash
-   git clone https://github.com/damanciofb/app-agendador-aulas-reforco.git
+   pip install Flask Flask-PyMongo pandas openpyxl gunicorn python-dotenv dnspython Werkzeug Jinja2 MarkupSafe itsdangerous click
 
 5. Estrutura de diretorios
 
@@ -72,5 +72,32 @@ Um sistema web moderno e simples para gerenciar alunos e seus horários de refor
       ├── schedule.html
       └── success.html
 ````
+### Instalação do MongoDB
+
+1. Atualizar o sistema
+   
+  ````bash
+  sudo apt update
+  sudo apt upgrade
+  ````
+2. Importar a chave GPG do MongoDB
+  
+  ````bash
+curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc | sudo tee /etc/apt/trusted.gpg.d/mongodb-server-6.0.asc
+  ````
+3. Adicionar o repositório oficial do MongoDB
+
+  ````bash
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+  ````
+4. Instalar o MongoDB
+
+  ````bash
+sudo apt update
+sudo apt install -y mongodb-org
+  ````  
+
+
+
 
 
