@@ -124,5 +124,5 @@ sudo systemctl enable mongod
   show dbs
   ````
 
-Após adicionar todos os arquivos em seus respquitivos diretorios.
+Após adicionar todos os arquivos em seus respequitivos diretorios.
 
