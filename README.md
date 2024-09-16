@@ -42,16 +42,16 @@ Um sistema web moderno e simples para gerenciar alunos e seus horários de refor
 
 2. Acesse o diretório do projeto:
 
-# cd meu_projeto_reforco
+  ````cd meu_projeto_reforco````
 
 3. Crie e ative um ambiente virtual:
 
-# python3 -m venv venv
-# source venv/bin/activate
+````python3 -m venv venv````
+````source venv/bin/activate````
 
 4. Instale as dependências:
 
-pip install -r requirements.txt
+````pip install -r requirements.txt````
 
 
 Estutura de diretorios:
