@@ -97,7 +97,13 @@ sudo apt update
 sudo apt install -y mongodb-org
   ````  
 
+5. Iniciar serviço
 
+  ````bash
+sudo systemctl start mongod
+  ````
+6. Habilitar MongoDB na inicialização do sistema
 
-
-
+  ````bash
+sudo systemctl enable mongod
+  ````
