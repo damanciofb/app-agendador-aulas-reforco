@@ -107,3 +107,15 @@ sudo systemctl start mongod
   ````bash
 sudo systemctl enable mongod
   ````
+7. Acessando o shell do MongoDB
+
+  ````bash
+  mongosh
+  ````
+8. Criar o Bando de dados
+
+  ````bash
+  use alunos
+  use agenda
+  ````
+
