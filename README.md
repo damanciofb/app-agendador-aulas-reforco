@@ -11,11 +11,9 @@ Um sistema web moderno e simples para gerenciar alunos e seus horários de refor
   
 ## 🖼️ Capturas de Tela
 
-> Insira aqui capturas de tela ou GIFs do seu sistema para dar uma ideia visual do projeto.
-
-| Página Inicial                              | Cadastro de Aluno                           | Visualização de Agendamentos                 |
-|---------------------------------------------|---------------------------------------------|---------------------------------------------|
-| ![Home](https://ibb.co/JKjqd2M)              | ![Cadastro](https://ibb.co/cCnMWyD)      | ![Agendamentos](https://ibb.co/R2NXs0J) |
+Pagina inicio: https://ibb.co/JKjqd2M
+Pagina Cadastro aluno: https://ibb.co/cCnMWyD
+Pagina Ver agendamentos: https://ibb.co/R2NXs0J
 
 ## 🚀 Tecnologias Utilizadas
 
