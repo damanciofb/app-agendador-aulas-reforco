@@ -20,7 +20,7 @@ Pagina Ver agendamentos: https://ibb.co/R2NXs0J
 - **Backend**: Python (Flask)
 - **Frontend**: HTML5, CSS3
 - **Banco de Dados**: MongoDB
-- **Servidores**: Nginx, Gunicorn
+- **Servidores**: Gunicorn
 - **Ferramentas de Exportação**: Pandas (para exportação de dados para Excel)
   
 ## 🛠️ Instalação e Configuração
