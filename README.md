@@ -124,5 +124,13 @@ sudo systemctl enable mongod
   show dbs
   ````
 
-Após adicionar todos os arquivos em seus respequitivos diretorios.
+Após, adicionar todos os arquivos em seus respequitivos diretorios.
 
+### Iniciando aplicação
+
+1. Dentro do diretorio ````meu_projeto-reforco```` usar o comando:
+
+  ````bash
+  python app.py
+  ````
+2. Abra um navegador de sua preferência, pesquiser por ````localhost:5000````
