@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Ver Agendamento{% endblock %}
+
+{% block content %}
+    <h1>Ver Agendamento</h1>
+    <form method="POST" action="/schedule">
+        <label for="student">Selecione o Aluno:</label>
+        <select id="student" name="student" required>
+            <option value="">Selecione...</option>
+            {% for student in students %}
+                <option value="{{ student['nome'] }}">{{ student['nome'] }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Ver Agendamento</button>
+    </form>
+
+    {% if selected_student %}
+        <h2>Agendamento de {{ selected_student['nome'] }}</h2>
+        <p><strong>Idade:</strong> {{ selected_student['idade'] }}</p>
+        <p><strong>Nível de Ensino:</strong> {{ selected_student['nivel_ensino'] }}</p>
+        <p><strong>Série:</strong> {{ selected_student['serie'] }}</p>
+        <p><strong>Matérias:</strong> {{ ', '.join(selected_student['materias']) }}</p>
+        <p><strong>Dias:</strong> {{ ', '.join(selected_student['dias']) }}</p>
+        <p><strong>Horário Inicial:</strong> {{ student_agenda['horario_inicio'] }}</p>
+        <p><strong>Horário Final:</strong> {{ student_agenda['horario_fim'] }}</p>
+        <a href="{{ url_for('export_student', student_name=selected_student['nome']) }}">Exportar Agendamento para Excel</a>
+    {% endif %}
+
+    <br><br>
+    <a href="{{ url_for('export_general') }}">Exportar Relatório Geral para Excel</a>
+{% endblock %}

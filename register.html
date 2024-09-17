@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}Cadastrar Aluno{% endblock %}
+
+{% block content %}
+    <h1>Cadastrar Novo Aluno</h1>
+    <form method="POST" action="/register">
+        <label for="name">Nome do Aluno:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Idade:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="education_level">Nível de Ensino:</label><br>
+        <select id="education_level" name="education_level" onchange="toggleSeries(this.value)" required>
+            <option value="">Selecione...</option>
+            <option value="Ensino Fundamental">Ensino Fundamental</option>
+            <option value="Ensino Médio">Ensino Médio</option>
+        </select>
+        <br><br>
+
+        <div id="fundamental-series" class="radio-group" style="display:none;">
+            {% for grade in series['Ensino Fundamental'] %}
+                <input type="radio" id="fundamental_{{ grade }}" name="grade" value="{{ grade }}">
+                <label for="fundamental_{{ grade }}">{{ grade }}</label><br>
+            {% endfor %}
+        </div>
+
+        <div id="medio-series" class="radio-group" style="display:none;">
+            {% for grade in series['Ensino Médio'] %}
+                <input type="radio" id="medio_{{ grade }}" name="grade" value="{{ grade }}">
+                <label for="medio_{{ grade }}">{{ grade }}</label><br>
+            {% endfor %}
+        </div>
+        <br>
+
+        <label>Matérias de Reforço:</label><br>
+        <div class="checkbox-group">
+            {% for subject in subjects %}
+                <input type="checkbox" id="{{ subject }}" name="subjects" value="{{ subject }}">
+                <label for="{{ subject }}">{{ subject }}</label>
+            {% endfor %}
+        </div>
+        <br>
+
+        <label>Selecione os dias da semana:</label><br>
+        <div class="checkbox-group">
+            {% for day in weekdays %}
+                <input type="checkbox" id="{{ day }}" name="days" value="{{ day }}">
+                <label for="{{ day }}">{{ day }}</label>
+            {% endfor %}
+        </div>
+        <br>
+
+        <label for="start_time">Horário Inicial:</label><br>
+        <input type="time" id="start_time" name="start_time" min="17:00" max="19:00" required><br><br>
+
+        <label for="end_time">Horário Final:</label><br>
+        <input type="time" id="end_time" name="end_time" min="17:00" max="19:00" required><br><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
